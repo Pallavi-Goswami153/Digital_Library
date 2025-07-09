@@ -28,7 +28,7 @@ function App() {
         <Route path="/rules" element={<Rules/>}/>
         <Route path="/timetable" element={<Timetable/>}/>
         <Route path="/journal" element={<Journal/>}/>
-        <Route path="/ebooks/:cls" element={<Course/>}/>
+        <Route path="/ebooks/:courseId" element={<Course/>}/>
 
       </Routes>
       <Footer />
