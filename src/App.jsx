@@ -11,6 +11,7 @@ import { Papers } from './Screens/Papers/Papers'
 import { Contact } from './Screens/Contact/Contact'
 import { Timetable } from './Screens/Timetable/Timetable'
 import { Journal } from './Screens/Journal/Journal'
+import { Course } from './Screens/Course/Course'
 function App() {
   return (
     <>
@@ -27,6 +28,8 @@ function App() {
         <Route path="/rules" element={<Rules/>}/>
         <Route path="/timetable" element={<Timetable/>}/>
         <Route path="/journal" element={<Journal/>}/>
+        <Route path="/ebooks/:cls" element={<Course/>}/>
+
       </Routes>
       <Footer />
     </>

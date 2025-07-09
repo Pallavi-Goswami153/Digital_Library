@@ -1,6 +1,7 @@
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import College from "../../assets/DDDD.jpg";
 import { Navigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 // const handleNavigate = () => {
 
 // }
@@ -16,6 +17,11 @@ export const Home = () => {
         { key: "mba", label: "MBA", icon: "🎓", headline: "Turn insights into impact.", content: "  Explore strategic management, marketing, finance, HR, and business analytics resources—carefully selected to fuel your MBA ambitions.", ending: "📖 Learn strategy. Master leadership. Drive change." }
         // { key: "vacc", label: "VALUE ADDED COURSES FOR COMPUTER APPLICATION", icon: "📘" },
     ];
+    const navigate=useNavigate();
+    const handleClick=(key)=>{
+           console.log("navigaet")
+            navigate(`/ebooks/${key}`)
+    }
 
     return (
         <>
@@ -115,12 +121,14 @@ export const Home = () => {
                         lg={2}
                         className="m-5 p-5 shadow-lg border rounded"
                         style={{ minHeight: "250px" }}
+                        onClick={()=>{handleClick(item.key)}}
+                       
                     >
                         {/* Alternate left/right positioning */}
                         {index % 2 === 0 ? (
                             <>
                                 <Col>
-                                    <Card className="text-dark" style={{ backgroundColor: "#f5f5dc", height: "240px" }}>
+                                    <Card className="text-dark" style={{ backgroundColor: "#f5f5dc", height: "240px" }}  >
                                         <Card.Body className="d-flex flex-column justify-content-center align-items-center">
                                             <h1>{item.label}</h1>
                                         </Card.Body>
@@ -151,7 +159,7 @@ export const Home = () => {
             </Container>
 
 
-            <Container className="my-5">
+            <Container className="my-5" >
                 <Card className="p-5 shadow-lg border-0" style={{ backgroundColor: "#fef8f2 " }}>
                     <h1 className="mb-3 text-primary">Purpose of DIGITAL LIBRARY</h1>
                     <p className="mb-4 text-dark" style={{ fontSize: "1.5rem" }}>
