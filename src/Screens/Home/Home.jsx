@@ -56,14 +56,15 @@ export const Home = () => {
                         height: "100vh",
                         position: "relative",
                         zIndex: 2,
-                        color: "#f8b400",
+                        color: "white"
+                        // color: "#f8b400",
                     }}
                 >
                     <Container>
                         <h1 className="text-center fw-semibold">Welcome To </h1>
                         <h1 className="text-center fw-semibold">MAHARAJA AGRASEN INSTITUTE OF</h1>
                         <h1 className="text-center fw-semibold">MANAGEMENT & TECHNOLOGY</h1>
-                        <h1 className="text-center fw-bold text-warning">DIGITAL LIBRARY</h1>
+                        <h1 className="text-center fw-bold ">DIGITAL LIBRARY</h1>
                     </Container>
                 </Container>
             </div>
