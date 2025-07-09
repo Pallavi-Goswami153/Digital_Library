@@ -1,4 +1,5 @@
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap"
+import { Navbar, Nav, Container, NavDropdown,Dropdown } from "react-bootstrap"
+import "./navbar.css"
 import { Link } from "react-router-dom"
 export const Navbarr = () => {
     return (
@@ -24,28 +25,40 @@ export const Navbarr = () => {
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto fw-bold">
                             <Nav.Link as={Link} to="/">Home</Nav.Link>
-                            <Nav.Link as={Link} to="/rules">Rules</Nav.Link>
+                           
 
                             <NavDropdown title="Papers" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to="/bca">BCA</NavDropdown.Item>
-                                <NavDropdown.Item as={Link}  to="/bba"> BBA </NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/bba"> BBA </NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/mca">MCA</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/mba"> MBA </NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown title="E-Contents" id="basic-nav-dropdown">
-                                <NavDropdown.Item as={Link} to="/sylabus">Syllabus</NavDropdown.Item>
+                                {/* <NavDropdown.Item as={Link} to="/sylabus">Syllabus</NavDropdown.Item> */}
+                                <Dropdown drop="end" className="submenu-dropdown">
+                                    <Dropdown.Toggle as="div" className="dropdown-item submenu-toggle">
+                                        Syllabus
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item as={Link} to="/sylabus/bca">BCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/bba">BBA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/mca">MCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/mba">MBA</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
                                 <NavDropdown.Item as={Link} to="/timetable"> Timetable </NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/journals"> Journals </NavDropdown.Item>
-
                             </NavDropdown>
+                           
                             <NavDropdown title="E-Books" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to="/technology">Technology</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/management"> Management </NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/class"> Class </NavDropdown.Item>
                             </NavDropdown>
+                              <Nav.Link as={Link} to="/rules">Rules</Nav.Link>
 
                         </Nav>
-                        <Nav className=" fw-bold">
+                        <Nav className="fw-bold">
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Contact-us</Nav.Link>
                         </Nav>
