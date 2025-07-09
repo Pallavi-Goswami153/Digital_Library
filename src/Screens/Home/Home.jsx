@@ -2,9 +2,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import College from "../../assets/DDDD.jpg";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-// const handleNavigate = () => {
 
-// }
 
 export const Home = () => {
     const data = [
@@ -120,8 +118,8 @@ export const Home = () => {
                         sm={1}
                         md={2}
                         lg={2}
-                        className="m-5 p-5 shadow-lg border rounded"
-                        style={{ minHeight: "250px" }}
+                        className="m-5 p-5 shadow-lg border rounded border-0"
+                        style={{ cursor:"pointer" }}
                         onClick={()=>{handleClick(item.key)}}
                        
                     >
@@ -129,25 +127,25 @@ export const Home = () => {
                         {index % 2 === 0 ? (
                             <>
                                 <Col>
-                                    <Card className="text-dark" style={{ backgroundColor: "#f5f5dc", height: "240px" }}  >
+                                    <Card className="text-dark border-0" style={{ backgroundColor: "#f5f5dc", height: "200px" }}  >
                                         <Card.Body className="d-flex flex-column justify-content-center align-items-center">
                                             <h1>{item.label}</h1>
                                         </Card.Body>
                                     </Card>
                                 </Col>
-                                <Col>
+                                <Col className="py-5">
                                     <h5>{item.headline}</h5>
                                     <p>{item.content}<br /><i>{item.ending}</i></p>
                                 </Col>
                             </>
                         ) : (
                             <>
-                                <Col>
+                                <Col className="py-5">
                                     <h5>{item.headline}</h5>
-                                    <p>{item.content}<br /><i>{item.ending}</i></p>
+                                    {item.content}<br /><i>{item.ending}</i>
                                 </Col>
                                 <Col>
-                                    <Card className="text-dark" style={{ backgroundColor: "#fbeccf", height: "240px" }}>
+                                    <Card className="text-dark border-0" style={{ backgroundColor: "#fbeccf", height: "200px" }}>
                                         <Card.Body className="d-flex flex-column justify-content-center align-items-center">
                                             <h1>{item.label}</h1>
                                         </Card.Body>
@@ -161,13 +159,14 @@ export const Home = () => {
 
 
             <Container className="my-5" >
-                <Card className="p-5 shadow-lg border-0" style={{ backgroundColor: "#fef8f2 " }}>
-                    <h1 className="mb-3 text-primary">Purpose of DIGITAL LIBRARY</h1>
-                    <p className="mb-4 text-dark" style={{ fontSize: "1.5rem" }}>
+                <Card className="p-5 shadow-lg border rounded border-0" style={{ backgroundColor: "#fef8f2 " }}>
+                    <h1 className="mb-3 text-primary ">PURPOSE OF DIGITAL LIBRARY</h1>
+                    <p className="mb-4 text-dark" style={{ fontSize: "1.2rem" }}>
                         The Digital Library at Maharaja Agrasen Institute of Management & Technology has been developed to provide easy access to resources like E-books, Journals, Syllabus, Previous Years' University Questions, Time Table, and other academic materials for the students of the institute.
                     </p>
-                    <Button
-                        className="rounded-pill px-4 py-2 border-0"
+                    <Button sm={6} md={2} lg={2} as={Col}
+                    // size="sm"
+                        className=" px-4 py-2 border-0"
                         style={{
                             backgroundColor: "#003366", // deep navy to match navbar
                             color: "white",

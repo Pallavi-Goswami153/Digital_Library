@@ -58,7 +58,16 @@ export const Navbarr = () => {
                                         <Dropdown.Item as={Link} to="/sylabus/mba">MBA</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
-                                <NavDropdown.Item as={Link} to="/journals"> Journals </NavDropdown.Item>
+                                {/* <NavDropdown.Item as={Link} to="/journals"> Journals </NavDropdown.Item> */}
+                                <Dropdown drop="end" className="submenu-dropdown">
+                                    <Dropdown.Toggle as="div" className="dropdown-item submenu-toggle">
+                                        Journal
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item as={Link} to="/journal/technical">Technology</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/journal/management">Management</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
                             </NavDropdown>
                            
                             <NavDropdown title="E-Books" id="basic-nav-dropdown">
@@ -83,6 +92,7 @@ export const Navbarr = () => {
                         <Nav className="fw-bold">
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Contact-us</Nav.Link>
+                            <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
