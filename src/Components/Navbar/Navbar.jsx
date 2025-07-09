@@ -46,14 +46,36 @@ export const Navbarr = () => {
                                         <Dropdown.Item as={Link} to="/sylabus/mba">MBA</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
-                                <NavDropdown.Item as={Link} to="/timetable"> Timetable </NavDropdown.Item>
+                                {/* <NavDropdown.Item as={Link} to="/timetable"> Timetable </NavDropdown.Item> */}
+                                <Dropdown drop="end" className="submenu-dropdown">
+                                    <Dropdown.Toggle as="div" className="dropdown-item submenu-toggle">
+                                        TimeTable
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item as={Link} to="/sylabus/bca">BCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/bba">BBA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/mca">MCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/mba">MBA</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown>
                                 <NavDropdown.Item as={Link} to="/journals"> Journals </NavDropdown.Item>
                             </NavDropdown>
                            
                             <NavDropdown title="E-Books" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to="/technology">Technology</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/management"> Management </NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/class"> Class </NavDropdown.Item>
+                                {/* <Dropdown drop="end" className="submenu-dropdown">
+                                    <Dropdown.Toggle as="div" className="dropdown-item submenu-toggle">
+                                        Course
+                                    </Dropdown.Toggle>
+                                    <Dropdown.Menu>
+                                        <Dropdown.Item as={Link} to="/sylabus/bca">BCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/bba">BBA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/mca">MCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/sylabus/mba">MBA</Dropdown.Item>
+                                    </Dropdown.Menu>
+                                </Dropdown> */}
+                                {/* <NavDropdown.Item as={Link} to="/class"> Course </NavDropdown.Item> */}
                             </NavDropdown>
                               <Nav.Link as={Link} to="/rules">Rules</Nav.Link>
 

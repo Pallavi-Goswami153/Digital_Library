@@ -6,14 +6,16 @@ import { Navigate } from "react-router-dom";
 // }
 
 export const Home = () => {
-    // const items = [
-    //     { key: "bca", label: "BCA", icon: "🎓" },
-    //     { key: "bba", label: "BBA", icon: "🎓" },
-    //     { key: "mca", label: "MCA", icon: "💼" },
-    //     { key: "mba", label: "MBA", icon: "🏛" },
-    //     { key: "ctis", label: "BCA-CTIS", icon: "💻" },
-    //     // { key: "vacc", label: "VALUE ADDED COURSES FOR COMPUTER APPLICATION", icon: "📘" },
-    // ];
+    const data = [
+        { key: "bca", label: "BCA", icon: "🎓", headline: "Your gateway to knowledge starts here.", content: " Explore essential textbooks, reference materials, and guides curated to support your BCA curriculum. From programming to data structures, every page brings you closer to mastery.", ending: "📖 Read more. Know more. Build more." },
+
+        { key: "bba", label: "BBA", icon: "🎓", headline: "Build your business foundation.", content: "Access textbooks and guides covering business principles, economics, communication, and entrepreneurship to support your BBA studies.", ending: "📖 Understand business. Think smart. Grow strong. " },
+
+        { key: "mca", label: "MCA", icon: "🎓", headline: "Advance your skills. Expand your horizons.", content: "Dive into books on advanced programming, AI, machine learning, software engineering, and more—curated to empower your MCA journey.", ending: "📖 Code deeper. Think bigger. Lead smarter." },
+
+        { key: "mba", label: "MBA", icon: "🎓", headline: "Turn insights into impact.", content: "  Explore strategic management, marketing, finance, HR, and business analytics resources—carefully selected to fuel your MBA ambitions.", ending: "📖 Learn strategy. Master leadership. Drive change." }
+        // { key: "vacc", label: "VALUE ADDED COURSES FOR COMPUTER APPLICATION", icon: "📘" },
+    ];
 
     return (
         <>
@@ -104,99 +106,69 @@ export const Home = () => {
         <p>The Digital Library at Maharaja Agrasen Institute of Management & Technology has been developed to provide easy access of the resources like E-book, Journal, Syllabus, Previous Years University Questions, Time Table and other academic resources to the student of the institute.</p>
         <Button className="bg-light" style={{color:"black", height:"50px" ,width:"100px"}}>Details</Button>
       </Card>*/}
-
-
-            <Container >
-                <Row sm={1} md={2} lg={2} className="m-5 p-5 shadow-lg border rounded " style={{ minHeight: "250px" }}>
-                    <Col>
-                        <Card className=" text-dark" style={{ backgroundColor: "#f5f5dc", height: "240px" }}>
-                            <Card.Body className="d-flex flex-column justify-content-center align-items-center">
-                                <h1>BCA</h1>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <div>
-                            <h5>Your gateway to knowledge starts here.</h5>
-                            <p>
-                                Explore essential textbooks, reference materials, and guides curated to support your BCA curriculum. From programming to data structures, every page brings you closer to mastery.
-                                <br />
-                                <i>📖 Read more. Know more. Build more.</i>
-                            </p>
-                        </div>
-                    </Col>
-                </Row>
-
-                <Row sm={1} md={2} lg={2} className="m-5 p-5 shadow-lg border rounded " style={{ minHeight: "250px" }}>
-                    <Col>
-                        <p>
-                            <h5>Build your business foundation.</h5>
-
-                            Access textbooks and guides covering business principles, economics, communication, and entrepreneurship to support your BBA studies.
-                            <br />
-                            <i>📖 Understand business. Think smart. Grow strong. </i>                        </p>
-                    </Col>
-                    <Col>
-                       <Card className=" text-dark" style={{ backgroundColor: "	#f7e7ce	", height: "240px" }}>
-                            <Card.Body className="d-flex flex-column justify-content-center align-items-center">
-                                <h1>BBA</h1>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
-                <Row sm={1} md={2} lg={2} className="m-5 p-5 shadow-lg border rounded " style={{ minHeight: "250px" }}>
-                    <Col>
-                        <Card className=" text-dark" style={{ backgroundColor: "#faf0e6", height: "240px" }}>
-                            <Card.Body className="d-flex flex-column justify-content-center align-items-center">
-                                <h1>MCA</h1>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                    <Col>
-                        <p>
-                            <h5>Advance your skills. Expand your horizons.</h5>
-
-                            Dive into books on advanced programming, AI, machine learning, software engineering, and more—curated to empower your MCA journey.
-                            <br />
-                            <i>📖 Code deeper. Think bigger. Lead smarter.    </i>                    </p>
-                    </Col>
-                </Row>
-                <Row sm={1} md={2} lg={2} className="m-5 p-5 shadow-lg border rounded" style={{ minHeight: "240px" }}>
-                    <Col>
-                        <p>
-                            <h5>Turn insights into impact.</h5>
-
-                            Explore strategic management, marketing, finance, HR, and business analytics resources—carefully selected to fuel your MBA ambitions.
-                            <br />
-                            <i>📖 Learn strategy. Master leadership. Drive change.  </i>                      </p>
-                    </Col>
-                    <Col >
-                       <Card className="text-dark" style={{ backgroundColor: "#fbeccf", height: "240px" }}>
-                            <Card.Body className="d-flex flex-column justify-content-center align-items-center">
-                                <h1>MBA</h1>
-                            </Card.Body>
-                        </Card>
-                    </Col>
-                </Row>
+            <Container>
+                {data.map((item, index) => (
+                    <Row
+                        key={item.key}
+                        sm={1}
+                        md={2}
+                        lg={2}
+                        className="m-5 p-5 shadow-lg border rounded"
+                        style={{ minHeight: "250px" }}
+                    >
+                        {/* Alternate left/right positioning */}
+                        {index % 2 === 0 ? (
+                            <>
+                                <Col>
+                                    <Card className="text-dark" style={{ backgroundColor: "#f5f5dc", height: "240px" }}>
+                                        <Card.Body className="d-flex flex-column justify-content-center align-items-center">
+                                            <h1>{item.label}</h1>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                                <Col>
+                                    <h5>{item.headline}</h5>
+                                    <p>{item.content}<br /><i>{item.ending}</i></p>
+                                </Col>
+                            </>
+                        ) : (
+                            <>
+                                <Col>
+                                    <h5>{item.headline}</h5>
+                                    <p>{item.content}<br /><i>{item.ending}</i></p>
+                                </Col>
+                                <Col>
+                                    <Card className="text-dark" style={{ backgroundColor: "#fbeccf", height: "240px" }}>
+                                        <Card.Body className="d-flex flex-column justify-content-center align-items-center">
+                                            <h1>{item.label}</h1>
+                                        </Card.Body>
+                                    </Card>
+                                </Col>
+                            </>
+                        )}
+                    </Row>
+                ))}
             </Container>
-          <Container className="my-5">
-    <Card className="p-5 shadow-lg border-0" style={{ backgroundColor: "#fef8f2 " }}>
-        <h1 className="mb-3 text-primary">Purpose of DIGITAL LIBRARY</h1>
-        <p className="mb-4 text-dark" style={{ fontSize: "1.5rem" }}>
-            The Digital Library at Maharaja Agrasen Institute of Management & Technology has been developed to provide easy access to resources like E-books, Journals, Syllabus, Previous Years' University Questions, Time Table, and other academic materials for the students of the institute.
-        </p>
-        <Button
-            className="rounded-pill px-4 py-2 border-0"
-            style={{
-                backgroundColor: "#003366", // deep navy to match navbar
-                color: "white",
-                transition: "all 0.3s ease"
-            }}
-        >
-            Details
-        </Button>
-    </Card>
-</Container>
+
+
+            <Container className="my-5">
+                <Card className="p-5 shadow-lg border-0" style={{ backgroundColor: "#fef8f2 " }}>
+                    <h1 className="mb-3 text-primary">Purpose of DIGITAL LIBRARY</h1>
+                    <p className="mb-4 text-dark" style={{ fontSize: "1.5rem" }}>
+                        The Digital Library at Maharaja Agrasen Institute of Management & Technology has been developed to provide easy access to resources like E-books, Journals, Syllabus, Previous Years' University Questions, Time Table, and other academic materials for the students of the institute.
+                    </p>
+                    <Button
+                        className="rounded-pill px-4 py-2 border-0"
+                        style={{
+                            backgroundColor: "#003366", // deep navy to match navbar
+                            color: "white",
+                            transition: "all 0.3s ease"
+                        }}
+                    >
+                        Details
+                    </Button>
+                </Card>
+            </Container>
 
         </>
     );

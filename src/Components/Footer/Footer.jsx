@@ -18,7 +18,8 @@ export const Footer = () => {
                             <FaLinkedin size={24} />
                         </a>
                         <a
-                            href="https://www.facebook.com/maimtdetail/"
+                           
+                            href="https://www.instagram.com/maimt_official/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-decoration-none mx-2"
@@ -27,7 +28,7 @@ export const Footer = () => {
                             <FaInstagram size={24} />
                         </a>
                         <a
-                            href="https://www.instagram.com/maimt_official/"
+                            href="https://www.facebook.com/maimtdetail/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-decoration-none mx-2 text-primary"
