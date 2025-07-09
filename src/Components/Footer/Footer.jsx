@@ -10,7 +10,7 @@ export const Footer = () => {
                 <Row className="justify-content-center mb-2">
                     <Col xs="auto">
                         <a
-                            href="https://www.linkedin.com/in/yourprofile"
+                            href="https://www.linkedin.com/school/maimtdetail/?original_referer=https%3A%2F%2Fwww.bing.com%2F"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-decoration-none mx-2 text-primary"
@@ -18,7 +18,7 @@ export const Footer = () => {
                             <FaLinkedin size={24} />
                         </a>
                         <a
-                            href="https://www.instagram.com/yourprofile"
+                            href="https://www.facebook.com/maimtdetail/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-decoration-none mx-2"
@@ -27,7 +27,7 @@ export const Footer = () => {
                             <FaInstagram size={24} />
                         </a>
                         <a
-                            href="https://www.facebook.com/yourprofile"
+                            href="https://www.instagram.com/maimt_official/"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="text-decoration-none mx-2 text-primary"

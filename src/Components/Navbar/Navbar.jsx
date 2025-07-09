@@ -4,10 +4,10 @@ export const Navbarr = () => {
     return (
         <>
             <Navbar
-                // variant="dark"
+                variant="dark"
                 sticky="top" expand="lg" style={{
-                    backgroundColor: "  #5590bf"
-                }} className="m-0 p-3 ">
+                    backgroundColor: "#1d3557"
+                }} className="m-0 p-3" sticky-top>
                 <Container fluid className="m-0 p-0 justify-content-start">
 
                     <Navbar.Brand as={Link} to="/">
@@ -34,13 +34,14 @@ export const Navbarr = () => {
                             </NavDropdown>
                             <NavDropdown title="E-Contents" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to="/sylabus">Syllabus</NavDropdown.Item>
-
                                 <NavDropdown.Item as={Link} to="/timetable"> Timetable </NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/journals"> Journals </NavDropdown.Item>
 
                             </NavDropdown>
                             <NavDropdown title="E-Books" id="basic-nav-dropdown">
                                 <NavDropdown.Item as={Link} to="/technology">Technology</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/management"> Management </NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/class"> Class </NavDropdown.Item>
                             </NavDropdown>
 
                         </Nav>
