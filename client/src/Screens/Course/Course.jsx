@@ -40,7 +40,9 @@ export const Course = () => {
     <Container fluid>
       <Row>
         {/* Sidebar */}
-        <Col md={2} className="text-white min-vh-100 p-3" style={{ backgroundColor: "#223e66" }}>
+        <Col md={2} 
+        className="text-white min-vh-100 p-3"
+         style={{ backgroundColor: "#223e66" }}>
           <h1 className="mb-4">{course.course_name}</h1>
           <Nav className="flex-column">
             {course.semesters.map((sem, idx) => (
@@ -60,17 +62,17 @@ export const Course = () => {
         <Col md={10} className="p-4">
         <Row>
           <Col>
-          <h3 className="mb-4">{selectedSemester.semester}</h3>
+          <h3 className="mb-4">E-books - {selectedSemester.semester}</h3>
           </Col>
 
           {/* Syllabus and Timetable */}
           <Col className="text-end">
           <div className="mb-4">
             <a href={selectedSemester.syllabus_pdf} target="_blank"  className="btn btn-outline-info me-2 mb-2">
-              📄 Syllabus 
+              Syllabus 
             </a>
             <a href={selectedSemester.timetable_pdf} target="_blank"  className="btn btn-outline-secondary mb-2">
-              🕒 Timetable
+              Timetable
             </a>
           </div>
           </Col>
@@ -84,7 +86,7 @@ export const Course = () => {
                 {/* E-books */}
                 {subject.ebooks?.length > 0 && (
                   <div className="mb-2">
-                    <b>📘 E-books:</b>
+                    {/* <b>E-books:</b> */}
                     <Row>
                       {subject.ebooks.map((ebook, idx) => (
                         <Col key={idx} lg={3} md={4} sm={6} xs={12} className="mb-4">
@@ -94,19 +96,6 @@ export const Course = () => {
                     </Row>
                   </div>
                 )}
-                {/* Previous Year Papers */}
-                {/* {subject.previous_year_questions?.length > 0 && (
-                  <div>
-                    <strong>📝 Previous Year Papers:</strong>
-                    <ul className="mb-0">
-                      {subject.previous_year_questions.map((pdf, idx) => (
-                        <li key={idx}>
-                          <a href={pdf} target="_blank" rel="noopener noreferrer">{`Paper ${idx + 1}`}</a>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                )} */}
               </Card.Body>
             </Container>
           ))}
