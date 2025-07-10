@@ -1,0 +1,904 @@
+{
+  "courses": [
+    {
+      "course_name": "BCA",
+      "semesters": [
+        {
+          "semester": "1 Semester",
+          "syllabus_pdf": "https://example.com/bca-sem1-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bca-sem1-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "2 Semester",
+          "syllabus_pdf": "https://example.com/bca-sem2-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bca-sem2-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "3 Semester",
+          "syllabus_pdf": "https://example.com/bca-sem3-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bca-sem3-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "4 Semester",
+          "syllabus_pdf": "https://example.com/bca-sem4-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bca-sem4-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "5 Semester",
+          "syllabus_pdf": "https://example.com/bca-sem5-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bca-sem5-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "6 Semester",
+          "syllabus_pdf": "https://example.com/bca-sem6-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bca-sem6-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course_name": "BBA",
+      "semesters": [
+        {
+          "semester": "1 Semester",
+          "syllabus_pdf": "https://example.com/bba-sem1-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bba-sem1-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "2 Semester",
+          "syllabus_pdf": "https://example.com/bba-sem2-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bba-sem2-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "3 Semester",
+          "syllabus_pdf": "https://example.com/bba-sem3-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bba-sem3-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "4 Semester",
+          "syllabus_pdf": "https://example.com/bba-sem4-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bba-sem4-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "5 Semester",
+          "syllabus_pdf": "https://example.com/bba-sem5-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bba-sem5-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "6 Semester",
+          "syllabus_pdf": "https://example.com/bba-sem6-syllabus.pdf",
+          "timetable_pdf": "https://example.com/bba-sem6-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Subject A",
+              "previous_year_questions": [
+                "https://example.com/subject-a-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject A - Fundamentals",
+                  "cover_image": "https://example.com/covers/subject-a.jpg",
+                  "link": "https://example.com/subject-a-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject B",
+              "previous_year_questions": [
+                "https://example.com/subject-b-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Subject B - Basics",
+                  "cover_image": "https://example.com/covers/subject-b.jpg",
+                  "link": "https://example.com/subject-b-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Subject C",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Subject C - Concepts",
+                  "cover_image": "https://example.com/covers/subject-c.jpg",
+                  "link": "https://example.com/subject-c-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course_name": "MCA",
+      "semesters": [
+        {
+          "semester": "1 Semester",
+          "syllabus_pdf": "https://example.com/mca-sem1-syllabus.pdf",
+          "timetable_pdf": "https://example.com/mca-sem1-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Programming Fundamentals",
+              "previous_year_questions": [
+                "https://example.com/programming-fundamentals-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Programming Fundamentals with Examples",
+                  "cover_image": "https://example.com/covers/programming-fundamentals.jpg",
+                  "link": "https://example.com/programming-fundamentals-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Data Structures",
+              "previous_year_questions": [
+                "https://example.com/data-structures-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Data Structures and Algorithms",
+                  "cover_image": "https://example.com/covers/data-structures.jpg",
+                  "link": "https://example.com/data-structures-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Discrete Mathematics",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Discrete Mathematics Concepts",
+                  "cover_image": "https://example.com/covers/discrete-mathematics.jpg",
+                  "link": "https://example.com/discrete-mathematics-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "2 Semester",
+          "syllabus_pdf": "https://example.com/mca-sem2-syllabus.pdf",
+          "timetable_pdf": "https://example.com/mca-sem2-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Object Oriented Programming",
+              "previous_year_questions": [
+                "https://example.com/oop-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Mastering Object Oriented Programming",
+                  "cover_image": "https://example.com/covers/oop.jpg",
+                  "link": "https://example.com/oop-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Database Management Systems",
+              "previous_year_questions": [
+                "https://example.com/dbms-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Database Management Systems Concepts",
+                  "cover_image": "https://example.com/covers/dbms.jpg",
+                  "link": "https://example.com/dbms-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Operating Systems",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Operating Systems Design and Implementation",
+                  "cover_image": "https://example.com/covers/operating-systems.jpg",
+                  "link": "https://example.com/operating-systems-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "3 Semester",
+          "syllabus_pdf": "https://example.com/mca-sem3-syllabus.pdf",
+          "timetable_pdf": "https://example.com/mca-sem3-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Software Engineering",
+              "previous_year_questions": [
+                "https://example.com/software-engineering-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Software Engineering Principles",
+                  "cover_image": "https://example.com/covers/software-engineering.jpg",
+                  "link": "https://example.com/software-engineering-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Computer Networks",
+              "previous_year_questions": [
+                "https://example.com/computer-networks-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Introduction to Computer Networks",
+                  "cover_image": "https://example.com/covers/computer-networks.jpg",
+                  "link": "https://example.com/computer-networks-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Theory of Computation",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Theory of Computation Fundamentals",
+                  "cover_image": "https://example.com/covers/theory-computation.jpg",
+                  "link": "https://example.com/theory-computation-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "4 Semester",
+          "syllabus_pdf": "https://example.com/mca-sem4-syllabus.pdf",
+          "timetable_pdf": "https://example.com/mca-sem4-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Web Technologies",
+              "previous_year_questions": [
+                "https://example.com/web-technologies-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Learning Web Technologies",
+                  "cover_image": "https://example.com/covers/web-technologies.jpg",
+                  "link": "https://example.com/web-technologies-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Artificial Intelligence",
+              "previous_year_questions": [
+                "https://example.com/ai-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Artificial Intelligence Concepts",
+                  "cover_image": "https://example.com/covers/ai.jpg",
+                  "link": "https://example.com/ai-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Mobile Computing",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Mobile Computing Essentials",
+                  "cover_image": "https://example.com/covers/mobile-computing.jpg",
+                  "link": "https://example.com/mobile-computing-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "course_name": "MBA",
+      "semesters": [
+        {
+          "semester": "1 Semester",
+          "syllabus_pdf": "https://example.com/mba-sem1-syllabus.pdf",
+          "timetable_pdf": "https://example.com/mba-sem1-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Principles of Management",
+              "previous_year_questions": [
+                "https://example.com/principles-management-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Principles of Management Essentials",
+                  "cover_image": "https://example.com/covers/principles-management.jpg",
+                  "link": "https://example.com/principles-management-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Marketing Management",
+              "previous_year_questions": [
+                "https://example.com/marketing-management-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Marketing Management Fundamentals",
+                  "cover_image": "https://example.com/covers/marketing-management.jpg",
+                  "link": "https://example.com/marketing-management-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Business Communication",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Effective Business Communication",
+                  "cover_image": "https://example.com/covers/business-communication.jpg",
+                  "link": "https://example.com/business-communication-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "2 Semester",
+          "syllabus_pdf": "https://example.com/mba-sem2-syllabus.pdf",
+          "timetable_pdf": "https://example.com/mba-sem2-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Financial Management",
+              "previous_year_questions": [
+                "https://example.com/financial-management-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Financial Management Basics",
+                  "cover_image": "https://example.com/covers/financial-management.jpg",
+                  "link": "https://example.com/financial-management-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Human Resource Management",
+              "previous_year_questions": [
+                "https://example.com/hrm-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Human Resource Management Concepts",
+                  "cover_image": "https://example.com/covers/hrm.jpg",
+                  "link": "https://example.com/hrm-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Operations Management",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Operations Management Fundamentals",
+                  "cover_image": "https://example.com/covers/operations-management.jpg",
+                  "link": "https://example.com/operations-management-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "3 Semester",
+          "syllabus_pdf": "https://example.com/mba-sem3-syllabus.pdf",
+          "timetable_pdf": "https://example.com/mba-sem3-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Strategic Management",
+              "previous_year_questions": [
+                "https://example.com/strategic-management-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Strategic Management Essentials",
+                  "cover_image": "https://example.com/covers/strategic-management.jpg",
+                  "link": "https://example.com/strategic-management-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "International Business",
+              "previous_year_questions": [
+                "https://example.com/international-business-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "International Business Fundamentals",
+                  "cover_image": "https://example.com/covers/international-business.jpg",
+                  "link": "https://example.com/international-business-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Entrepreneurship",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Entrepreneurship Basics",
+                  "cover_image": "https://example.com/covers/entrepreneurship.jpg",
+                  "link": "https://example.com/entrepreneurship-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "semester": "4 Semester",
+          "syllabus_pdf": "https://example.com/mba-sem4-syllabus.pdf",
+          "timetable_pdf": "https://example.com/mba-sem4-timetable.pdf",
+          "subjects": [
+            {
+              "name": "Business Ethics",
+              "previous_year_questions": [
+                "https://example.com/business-ethics-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Business Ethics Principles",
+                  "cover_image": "https://example.com/covers/business-ethics.jpg",
+                  "link": "https://example.com/business-ethics-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Project Management",
+              "previous_year_questions": [
+                "https://example.com/project-management-paper.pdf"
+              ],
+              "ebooks": [
+                {
+                  "book_title": "Project Management Fundamentals",
+                  "cover_image": "https://example.com/covers/project-management.jpg",
+                  "link": "https://example.com/project-management-ebook.pdf"
+                }
+              ]
+            },
+            {
+              "name": "Research Methodology",
+              "previous_year_questions": [],
+              "ebooks": [
+                {
+                  "book_title": "Research Methodology Essentials",
+                  "cover_image": "https://example.com/covers/research-methodology.jpg",
+                  "link": "https://example.com/research-methodology-ebook.pdf"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

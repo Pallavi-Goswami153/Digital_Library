@@ -136,7 +136,7 @@ export const Contact = () => {
                         <b>
                             Maharaja Agrasen Institute of Management and Technology, Near Agrasen Chowk, Old Saharanpur Road, (Adjacent to Sector-15, HUDA) Jagadhri-135003.
                             <br />
-
+                                        <br />
                             Director: director@maimt.com
                             <br />
                             HR Department: hr@maimt.com
@@ -149,9 +149,12 @@ export const Contact = () => {
                             <br />
                             Librarian: library@maimt.com.
                             <br />
+                            <br />
                             HELPLINE
                             <br />
+                            <br />
                             01732-235255
+                            <br />
                             <br />
                             01732-231362
                         </b>
