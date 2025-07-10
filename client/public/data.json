@@ -2,6 +2,7 @@
   "courses": [
     {
       "course_name": "BCA",
+      "category": "Technology",
       "semesters": [
         {
           "semester": "1 Semester",
@@ -271,6 +272,7 @@
     },
     {
       "course_name": "BBA",
+      "category": "Management",
       "semesters": [
         {
           "semester": "1 Semester",
@@ -540,6 +542,7 @@
     },
     {
       "course_name": "MCA",
+      "category": "Technology",
       "semesters": [
         {
           "semester": "1 Semester",
@@ -721,6 +724,7 @@
     },
     {
       "course_name": "MBA",
+      "category": "Management",
       "semesters": [
         {
           "semester": "1 Semester",

@@ -71,8 +71,8 @@ export const Navbarr = () => {
                             </NavDropdown>
                            
                             <NavDropdown title="E-Books" id="basic-nav-dropdown">
-                                <NavDropdown.Item as={Link} to="/technology">Technology</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/management"> Management </NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/allebooks/technology">Technology</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/allebooks/management"> Management </NavDropdown.Item>
                                 {/* <Dropdown drop="end" className="submenu-dropdown">
                                     <Dropdown.Toggle as="div" className="dropdown-item submenu-toggle">
                                         Course
