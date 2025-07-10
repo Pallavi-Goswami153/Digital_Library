@@ -2,6 +2,7 @@ import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import College from "../../assets/DDDD.jpg";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import { FaItalic } from "react-icons/fa";
 
 
 export const Home = () => {
@@ -112,6 +113,7 @@ export const Home = () => {
         <Button className="bg-light" style={{color:"black", height:"50px" ,width:"100px"}}>Details</Button>
       </Card>*/}
             <Container>
+                <h1 style={{textAlign:"center" ,margin:40, textDecoration:"bold", fontFamily:"cursive", fontStyle:"italic"}}>Get your content from here...</h1>
                 {data.map((item, index) => (
                     <Row
                         key={item.key}
@@ -136,6 +138,7 @@ export const Home = () => {
                                 <Col className="py-5">
                                     <h5>{item.headline}</h5>
                                     <p>{item.content}<br /><i>{item.ending}</i></p>
+                                    {/* <p>Get your Content from here</p> */}
                                 </Col>
                             </>
                         ) : (

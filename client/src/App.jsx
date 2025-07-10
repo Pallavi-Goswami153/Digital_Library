@@ -13,6 +13,7 @@ import { Timetable } from './Screens/Timetable/Timetable'
 import { Journal } from './Screens/Journal/Journal'
 import { Course } from './Screens/Course/Course'
 import { Login } from './Screens/Admin/Login'
+import { Technology } from './Screens/Technology/Technology'
 function App() {
   return (
     <>
@@ -31,8 +32,7 @@ function App() {
         <Route path="/journal" element={<Journal/>}/>
         <Route path="/ebooks/:courseId" element={<Course/>}/>
         <Route path="/admin" element={<Login/>}/>
-
-
+        <Route path="/technology" element={<Technology/>}/>
       </Routes>
       <Footer />
     </>
