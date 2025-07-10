@@ -28,10 +28,10 @@ export const Navbarr = () => {
                            
 
                             <NavDropdown title="Papers" id="basic-nav-dropdown">
-                                <NavDropdown.Item as={Link} to="/bca">BCA</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/bba"> BBA </NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/mca">MCA</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/mba"> MBA </NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/papers/bca">BCA</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/papers/bba"> BBA </NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/papers/mca">MCA</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/papers/mba"> MBA </NavDropdown.Item>
                             </NavDropdown>
                             <NavDropdown title="E-Contents" id="basic-nav-dropdown">
                                 {/* <NavDropdown.Item as={Link} to="/sylabus">Syllabus</NavDropdown.Item> */}
