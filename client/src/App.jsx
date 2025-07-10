@@ -29,13 +29,9 @@ function App() {
         <Route path="/rules" element={<Rules/>}/>
         <Route path="/timetable" element={<Timetable/>}/>
         <Route path="/journal" element={<Journal/>}/>
-<<<<<<< HEAD
-        <Route path="/ebooks/:cls" element={<Course/>}/>
+        <Route path="/ebooks/:courseId" element={<Course/>}/>
         <Route path="/admin" element={<Login/>}/>
 
-=======
-        <Route path="/ebooks/:courseId" element={<Course/>}/>
->>>>>>> 879edb0c06bf297ca1b06bc6474271bc0ecdcc45
 
       </Routes>
       <Footer />

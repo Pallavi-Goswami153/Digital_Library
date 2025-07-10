@@ -1,6 +1,0 @@
-export const Journal=()=>{
-    return(
-        <>
-        </>
-    )
-}
