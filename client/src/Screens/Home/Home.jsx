@@ -3,17 +3,21 @@ import College from "../../assets/DDDD.jpg";
 import { Navigate } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { FaItalic } from "react-icons/fa";
+// import { FaLaptopCode } from 'react-icons/fa';//bca
+// import { FaBusinessTime } from 'react-icons/fa';//bba
+// import { FaCodeBranch } from 'react-icons/fa';//mca
+// import { FaChartLine } from 'react-icons/fa';//mba
 
 
 export const Home = () => {
     const data = [
-        { key: "bca", label: "BCA", icon: "🎓", headline: "Your gateway to knowledge starts here.", content: " Explore essential textbooks, reference materials, and guides curated to support your BCA curriculum. From programming to data structures, every page brings you closer to mastery.", ending: "📖 Read more. Know more. Build more." },
+        { key: "bca", label: "BCA", icon: "", headline: "Your gateway to knowledge starts here.", content: " Explore essential textbooks, reference materials, and guides curated to support your BCA curriculum. From programming to data structures, every page brings you closer to mastery.", ending: "📖 Read more. Know more. Build more."},
 
-        { key: "bba", label: "BBA", icon: "🎓", headline: "Build your business foundation.", content: "Access textbooks and guides covering business principles, economics, communication, and entrepreneurship to support your BBA studies.", ending: "📖 Understand business. Think smart. Grow strong. " },
+        { key: "bba", label: "BBA", icon: "", headline: "Build your business foundation.", content: "Access textbooks and guides covering business principles, economics, communication, and entrepreneurship to support your BBA studies.", ending: "📖 Understand business. Think smart. Grow strong. " },
 
-        { key: "mca", label: "MCA", icon: "🎓", headline: "Advance your skills. Expand your horizons.", content: "Dive into books on advanced programming, AI, machine learning, software engineering, and more—curated to empower your MCA journey.", ending: "📖 Code deeper. Think bigger. Lead smarter." },
+        { key: "mca", label: "MCA", icon:"", headline: "Advance your skills. Expand your horizons.", content: "Dive into books on advanced programming, AI, machine learning, software engineering, and more—curated to empower your MCA journey.", ending: "📖 Code deeper. Think bigger. Lead smarter." },
 
-        { key: "mba", label: "MBA", icon: "🎓", headline: "Turn insights into impact.", content: "  Explore strategic management, marketing, finance, HR, and business analytics resources—carefully selected to fuel your MBA ambitions.", ending: "📖 Learn strategy. Master leadership. Drive change." }
+        { key: "mba", label: "MBA", icon: "", headline: "Turn insights into impact.", content: "  Explore strategic management, marketing, finance, HR, and business analytics resources—carefully selected to fuel your MBA ambitions.", ending: "📖 Learn strategy. Master leadership. Drive change." }
         // { key: "vacc", label: "VALUE ADDED COURSES FOR COMPUTER APPLICATION", icon: "📘" },
     ];
     const navigate=useNavigate();
@@ -113,7 +117,9 @@ export const Home = () => {
         <Button className="bg-light" style={{color:"black", height:"50px" ,width:"100px"}}>Details</Button>
       </Card>*/}
             <Container>
-                <h1 style={{textAlign:"center" ,margin:40, textDecoration:"bold", fontFamily:"cursive", fontStyle:"italic"}}>Get your content from here...</h1>
+                <h1 style={{textAlign:"center" ,margin:40, textDecoration:"bold", fontFamily:"cursive", fontStyle:"italic"}}>Your one-stop destination for semester success!
+
+</h1>
                 {data.map((item, index) => (
                     <Row
                         key={item.key}
@@ -131,6 +137,7 @@ export const Home = () => {
                                 <Col>
                                     <Card className="text-dark border-0" style={{ backgroundColor: "#f5f5dc", height: "200px" }}  >
                                         <Card.Body className="d-flex flex-column justify-content-center align-items-center">
+                                            
                                             <h1>{item.label}</h1>
                                         </Card.Body>
                                     </Card>
@@ -150,6 +157,7 @@ export const Home = () => {
                                 <Col>
                                     <Card className="text-dark border-0" style={{ backgroundColor: "#fbeccf", height: "200px" }}>
                                         <Card.Body className="d-flex flex-column justify-content-center align-items-center">
+                                           
                                             <h1>{item.label}</h1>
                                         </Card.Body>
                                     </Card>
@@ -161,7 +169,7 @@ export const Home = () => {
             </Container>
 
 
-            <Container className="my-5" >
+            <Container fluid className="my-5" >
                 <Card className="p-5 shadow-lg border rounded border-0" style={{ backgroundColor: "#fef8f2 " }}>
                     <h1 className="mb-3 text-primary ">PURPOSE OF DIGITAL LIBRARY</h1>
                     <p className="mb-4 text-dark" style={{ fontSize: "1.2rem" }}>
