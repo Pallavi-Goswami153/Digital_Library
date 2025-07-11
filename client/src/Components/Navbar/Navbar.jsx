@@ -40,10 +40,10 @@ export const Navbarr = () => {
                                         Syllabus
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu>
-                                        <Dropdown.Item as={Link} to="/sylabus/bca">BCA</Dropdown.Item>
-                                        <Dropdown.Item as={Link} to="/sylabus/bba">BBA</Dropdown.Item>
-                                        <Dropdown.Item as={Link} to="/sylabus/mca">MCA</Dropdown.Item>
-                                        <Dropdown.Item as={Link} to="/sylabus/mba">MBA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/syllabus/bca">BCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/syllabus/bba">BBA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/syllabus/mca">MCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/syllabus/mba">MBA</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 {/* <NavDropdown.Item as={Link} to="/timetable"> Timetable </NavDropdown.Item> */}
@@ -52,10 +52,10 @@ export const Navbarr = () => {
                                         TimeTable
                                     </Dropdown.Toggle>
                                     <Dropdown.Menu>
-                                        <Dropdown.Item as={Link} to="/sylabus/bca">BCA</Dropdown.Item>
-                                        <Dropdown.Item as={Link} to="/sylabus/bba">BBA</Dropdown.Item>
-                                        <Dropdown.Item as={Link} to="/sylabus/mca">MCA</Dropdown.Item>
-                                        <Dropdown.Item as={Link} to="/sylabus/mba">MBA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/timetable/bca">BCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/timetable/bba">BBA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/timetable/mca">MCA</Dropdown.Item>
+                                        <Dropdown.Item as={Link} to="/timetable/mba">MBA</Dropdown.Item>
                                     </Dropdown.Menu>
                                 </Dropdown>
                                 {/* <NavDropdown.Item as={Link} to="/journals"> Journals </NavDropdown.Item> */}

@@ -23,12 +23,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
         <Route path="/papers/:courseId" element={<Papers/>}/>
-        <Route path="/syllabus" element={<Syllabus/>}/>
+        <Route path="/syllabus/:courseId" element={<Syllabus/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/contact" element={<Contact/>}/>
         <Route path="/ebooks" element={<EBooks/>}/>
         <Route path="/rules" element={<Rules/>}/>
-        <Route path="/timetable" element={<Timetable/>}/>
+        <Route path="/timetable/:courseId" element={<Timetable/>}/>
         <Route path="/journal" element={<Journal/>}/>
         <Route path="/ebooks/:courseId" element={<Course/>}/>
         <Route path="/admin" element={<Login/>}/>

@@ -25,10 +25,8 @@ export const Home = () => {
            console.log("navigaet")
             navigate(`/ebooks/${key}`)
     }
-
     return (
         <>
-
             <div
                 style={{
                     backgroundImage: `url(${College})`,
