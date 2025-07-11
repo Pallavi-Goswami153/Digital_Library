@@ -86,7 +86,7 @@ export const EbookViewer = () => {
         }
     })
   return (
-    <div className="container mt-4">
+    <div className="container mt-4" style={{marginBottom:"500px"}}>
       <Row className='m-3'>
         <Col>
       <h3 
