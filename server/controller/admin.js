@@ -7,11 +7,11 @@ export const adminLogin=async(req,res)=>{
       console.log(email,password)
       const admin=await Admin.findOne({email});
       if(!admin){
-        return res.status(404).json({msg:"admin not found"});
+        return res.status(200).json({msg:"Invalid credentials"});
       }
       const isValid = await admin.comparePassword(password);
 
-      if (!isValid) return res.status(401).json({ msg: "Invalid credentials" });
+      if (!isValid) return res.status(200).json({ msg: "Invalid credentials" });
       else res.status(200).json({msg:"logged in sucessfully"})
 }
 export const createAdmin=async(req,res)=>{

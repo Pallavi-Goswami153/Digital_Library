@@ -1,6 +1,11 @@
 import { Container, Row, Col, Button, FormGroup, Form } from "react-bootstrap";
 import { Formik, useFormik } from "formik";
 import * as yup from "yup"
+import axios from "axios"
+import { useEffect } from "react";
+import {toast} from "react-hot-toast"
+import { Toaster } from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
 const validateSchema = yup.object().shape({
 
     email: yup.string()
@@ -10,79 +15,73 @@ const validateSchema = yup.object().shape({
     password: yup.string()
         .required("password cannot be empty")
         .matches(/^[a-zA-Z0-9]{5,10}$/, "Password should conatin 5-10 characters and alphanumeric values only"),
-    confirmPassword: yup.string()
-        .required("confirm-password cannot be empty")
-        .matches(yup.ref("password"), "Password is not matchnig")
+    // confirmPassword: yup.string()
+    //     .required("confirm-password cannot be empty")
+    //     .matches(yup.ref("password"), "Password is not matchnig")
 })
 export const Login = () => {
+    const navigate=useNavigate();
     const formik = useFormik({
         initialValues: {
             email: "",
             password: "",
         },
-        onSubmit: async(values,{ resetForm }) => {
-            try {
-                const response = await fetch("http://localhost:4000/admin", {
-                    method: "POST",
-                    headers: {
-                        "Content-Type": "application/json"
-                    },
-                    body: JSON.stringify(values)
-                });
+        validationSchema: validateSchema,
+        onSubmit: async(values) => {
+            console.log(values)
+            try{
+                const response=await axios.post("http://localhost:4000/admin",values);
+                console.log(response.data)
+                // <Toaster position="top-right" />
+                toast.success(response.data.msg,{position:"top-right"})
+                // navigate("/")
 
-                const data = await response.json();
-
-                if (response.ok) {
-                    alert("Login successful!");
-                    console.log(data); // Could contain token or admin info
-                    resetForm();
-                    // Optionally: navigate to dashboard
-                } else {
-                    alert(data.msg || "Login failed");
-                }
-            } catch (error) {
-                console.error("Error during login:", error);
-                alert("Server error. Please try again later.");
             }
-        
-    },
-
-
-        validationSchema: validateSchema
+           catch(err){
+            console.log(err)
+           }
+        },
     })
-//  console.log(formik.errors.username)
-return (
-    <>
-        <Container>
-            <Form onSubmit={formik.handleSubmit} className="p-5 shadow-lg border rounded">
-                <Row className="d-flex justify-content-center  m-5" sm={1} md={2} lg={2} >
-                    <Col md={4} >
-                        <h1>Login As Admin</h1>
-                        <FormGroup>
-                            <Form.Label>E-Mail</Form.Label>
-                            <Form.Control type="email"
-                                placeholder="enter E-Mail"
-                                name="email"
-                                {...formik.getFieldProps("email")} />
-                        </FormGroup>
-                        {formik.touched.email && formik.errors.email && (
-                            <div style={{ color: "red" }}>{formik.errors.email}</div>
-                        )}
-                        <FormGroup>
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password"
-                                placeholder="enter Password"
-                                name="password"
-                                {...formik.getFieldProps("password")} />
-                            {formik.touched.password && formik.errors.password && (
-                                <div style={{ color: "red" }}>{formik.errors.password}</div>
-                            )}
-                        </FormGroup>
-                        <Button type="submit" className="my-5">Login</Button>
-                    </Col>
-                </Row>
-            </Form>
-        </Container>
-    </>
-)
+    useEffect(() => {
+        
+    })
+    //  console.log(formik.errors.username)
+    return (
+        <>
+           {/* {console.log(formik.values)} */}
+            {/* {console.log(formik.values)} */}
+            <Container className="p-4">
+                <Form onSubmit={formik.handleSubmit} className="p-5 shadow-lg border rounded m-4">
+                    <Row className="d-flex justify-content-center  m-5" sm={1} md={2} lg={2} >
+                        <Col md={4} >
+                            <h1>Login As Admin</h1>
+                            <FormGroup>
+                                <Form.Label>E-Mail</Form.Label>
+                                <Form.Control type="email"
+                                    placeholder="enter E-Mail"
+                                    isInvalid={!!formik.errors.email && formik.touched.email}
+                                    {...formik.getFieldProps("email")} />
+                            </FormGroup>
+                            <Form.Control.Feedback type="invalid">
+                                {formik.errors.email}
+                            </Form.Control.Feedback>
+                            <FormGroup>
+                                <Form.Label>Password</Form.Label>
+                                <Form.Control type="password"
+                                    placeholder="enter Password"
+                                    isInvalid={!!formik.errors.password && formik.touched.password}
+                                    {...formik.getFieldProps("password")} />
+                                <Form.Control.Feedback type="invalid">
+                                    {formik.errors.password}
+                                </Form.Control.Feedback>
+
+                            </FormGroup>
+                            <Button type="submit" className="my-5">Login</Button>
+                           <Toaster position="top-right" />
+                        </Col>
+                    </Row>
+                </Form>
+            </Container>
+        </>
+    )
 }
