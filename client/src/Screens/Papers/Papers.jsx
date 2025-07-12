@@ -32,7 +32,14 @@ export const Papers = () => {
             });
     }, [courseId]);
 
-    if (loading) return <p className="text-center mt-4">Loading...</p>;
+    if (loading) return  <BeatLoader
+        color="#1d3557"
+        loading={loading}
+        // cssOverride={override}
+        size={150}
+        aria-label="Loading Spinner"
+        data-testid="loader" />
+    // <p className="text-center mt-4">Loading...</p>;
     if (error) return <p className="text-danger text-center mt-4">Error: {error}</p>;
     if (!course || !selectedSemester) return null;
 

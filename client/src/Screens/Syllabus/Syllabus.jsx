@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Nav, Card, Button } from 'react-bootstrap';
 import { PDFViewer } from '../../Components/PDFviewer/Pdf';
+import { BeatLoader } from 'react-spinners';
 export const Syllabus = () => {
   const { courseId } = useParams(); // e.g. "bca", "mba"
   const [course, setCourse] = useState(null);
@@ -31,7 +32,14 @@ export const Syllabus = () => {
       });
   }, [courseId]);
 
-  if (loading) return <p className="text-center mt-4">Loading...</p>;
+  if (loading) return <BeatLoader
+    color="#1d3557"
+    loading={loading}
+    // cssOverride={override}
+    size={150}
+    aria-label="Loading Spinner"
+    data-testid="loader" />
+  // <p className="text-center mt-4">Loading...</p>;
   if (error) return <p className="text-danger text-center mt-4">Error: {error}</p>;
   if (!course || !selectedSemester) return null;
 
@@ -39,9 +47,9 @@ export const Syllabus = () => {
     <Container fluid>
       <Row>
         {/* Sidebar */}
-        <Col md={2} 
-        className="text-white min-vh-100 p-3"
-         style={{ backgroundColor: "#223e66" }}>
+        <Col md={2}
+          className="text-white min-vh-100 p-3"
+          style={{ backgroundColor: "#223e66" }}>
           <h1 className="mb-4">{course.course_name}</h1>
           <Nav className="flex-column">
             {course.semesters.map((sem, idx) => (
@@ -57,19 +65,19 @@ export const Syllabus = () => {
         </Col>
 
         {/* Main Content */}
-        
-        <Col md={10} className="p-4">
-        <Row>
-          
-          <h3 className="mb-4">Syllabus - {selectedSemester.semester}</h3>
-         
 
-          {/* Syllabus */}
-          <Col>
-            <PDFViewer link={selectedSemester.syllabus_pdf}/>
-          </Col>
-            </Row>
-         
+        <Col md={10} className="p-4">
+          <Row>
+
+            <h3 className="mb-4">Syllabus - {selectedSemester.semester}</h3>
+
+
+            {/* Syllabus */}
+            <Col>
+              <PDFViewer link={selectedSemester.syllabus_pdf} />
+            </Col>
+          </Row>
+
         </Col>
       </Row>
     </Container>
