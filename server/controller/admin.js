@@ -17,9 +17,9 @@ export const adminLogin=async(req,res)=>{
      const token=jwt.sign(
        { email:email},
         process.env.JWT_SECRET,
-        {expiresIn:"1h"}
+        {expiresIn:"10s"}
      );
-     res.json({token});
+     res.json({token,msg:"Login sucessfully"});
 }
 export const createAdmin=async(req,res)=>{
     await connect();

@@ -15,6 +15,7 @@ import { Course } from './Screens/Course/Course'
 import { Login } from './Screens/Admin/Login'
 import { EbookViewer } from './Screens/EbookViewer/EbookViewer'
 import { AdminHome } from './Screens/Adminpages/AdminHome'
+import { ProtectedRoute } from './Screens/Adminpages/protectedRoute'
 function App() {
   return (
     <>
@@ -31,10 +32,10 @@ function App() {
         <Route path="/timetable/:courseId" element={<Timetable/>}/>
         <Route path="/journal" element={<Journal/>}/>
         <Route path="/ebooks/:courseId" element={<Course/>}/>
-        <Route path="/admin" element={<Login/>}/>
+        <Route path="/admin/login" element={<Login/>}/>
         {/* <Route path="/technology" element={<Technology/>}/> */}
         <Route path="/allebooks/:category" element={<EbookViewer/>}/>
-        <Route path="/admin/home" element={<AdminHome/>}/>
+        <Route path="/admin/home" element={<ProtectedRoute><AdminHome/></ProtectedRoute>}/>
 
       </Routes>
       <Footer />

@@ -1,9 +1,10 @@
 import { Container, Row, Col, Button, FormGroup, Form } from "react-bootstrap";
 import { Formik, useFormik } from "formik";
+import {jwtDecode} from "jwt-decode";
 import * as yup from "yup"
 import axios from "axios"
 import { useEffect } from "react";
-import {toast} from "react-hot-toast"
+import { toast } from "react-hot-toast"
 import { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 const validateSchema = yup.object().shape({
@@ -20,38 +21,47 @@ const validateSchema = yup.object().shape({
     //     .matches(yup.ref("password"), "Password is not matchnig")
 })
 export const Login = () => {
-    const navigate=useNavigate();
-    const handlenavigate=()=>{
-            navigate("/admin/home")
-    }
+    const navigate = useNavigate();
+    // const handlenavigate = () => {
+    //     navigate("/admin/home")
+    // }
     const formik = useFormik({
         initialValues: {
             email: "",
             password: "",
         },
         validationSchema: validateSchema,
-        onSubmit: async(values) => {
+        onSubmit: async (values) => {
             console.log(values)
-            try{
-                const response=await axios.post("http://localhost:4000/admin",values);
+            try {
+                const response = await axios.post("http://localhost:4000/admin/login", values);
                 console.log(response.data)
                 // <Toaster position="top-right" />
-                toast.success(response.data.msg,{position:"top-right"})
-                handlenavigate();
-                
+                const token = response.data.token
+                toast.success(response.data.msg, { position: "top-right" })
+                localStorage.setItem('token', response.data.token)
+               navigate("/admin/home")
+                const { exp } = jwtDecode(token);
+                const timeout = exp * 1000 - Date.now();
+                setTimeout(() => {
+                    localStorage.removeItem('token');
+                    navigate("/admin/login")
+                    // window.location.href = '/login'; // OR navigate('/login') if using useNavigate
+                }, timeout);
+
             }
-            catch(err){
+            catch (err) {
                 console.log(err)
             }
         },
     })
     useEffect(() => {
-        
+
     })
     //  console.log(formik.errors.username)
     return (
         <>
-           {/* {console.log(formik.values)} */}
+            {/* {console.log(formik.values)} */}
             {/* {console.log(formik.values)} */}
             <Container className="p-4">
                 <Form onSubmit={formik.handleSubmit} className="p-5 shadow-lg border rounded m-4">
@@ -80,7 +90,7 @@ export const Login = () => {
 
                             </FormGroup>
                             <Button type="submit" className="my-5">Login</Button>
-                           <Toaster position="top-right" />
+                            <Toaster position="top-right" />
                         </Col>
                     </Row>
                 </Form>
