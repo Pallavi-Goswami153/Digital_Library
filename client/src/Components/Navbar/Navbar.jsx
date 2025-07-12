@@ -92,7 +92,7 @@ export const Navbarr = () => {
                         <Nav className="fw-bold">
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Contact-us</Nav.Link>
-                            <Nav.Link as={Link} to="/admin">Admin</Nav.Link>
+                            <Nav.Link as={Link} to="/admin/login">Admin</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
