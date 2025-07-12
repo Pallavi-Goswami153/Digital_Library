@@ -1,5 +1,7 @@
 import mongoose from "mongoose"
 import {Admin} from "../model/schema.js"
+// import dotenv from "dotenv"
+import jwt from "jsonwebtoken"
 import { connect, disconnect } from "../Config/db.js";
 export const adminLogin=async(req,res)=>{
       await connect();
@@ -12,7 +14,12 @@ export const adminLogin=async(req,res)=>{
       const isValid = await admin.comparePassword(password);
 
       if (!isValid) return res.status(200).json({ msg: "Invalid credentials" });
-      else res.status(200).json({msg:"logged in sucessfully"})
+     const token=jwt.sign(
+       { email:email},
+        process.env.JWT_SECRET,
+        {expiresIn:"1h"}
+     );
+     res.json({token});
 }
 export const createAdmin=async(req,res)=>{
     await connect();
