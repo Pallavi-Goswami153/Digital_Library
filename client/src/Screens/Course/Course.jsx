@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { EBook } from '../../Components/EBooks/EBooks';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Nav, Card, Button } from 'react-bootstrap';
+import { BeatLoader } from 'react-spinners';
 
 export const Course = () => {
   const { courseId } = useParams(); // e.g. "bca", "mba"
@@ -32,7 +33,14 @@ export const Course = () => {
       });
   }, [courseId]);
 
-  if (loading) return <p className="text-center mt-4">Loading...</p>;
+  if (loading) return  <BeatLoader
+    color="#1d3557"
+    loading={loading}
+    // cssOverride={override}
+    size={150}
+    aria-label="Loading Spinner"
+    data-testid="loader" />
+  //  <p className="text-center mt-4">Loading...</p>;
   if (error) return <p className="text-danger text-center mt-4">Error: {error}</p>;
   if (!course || !selectedSemester) return null;
 

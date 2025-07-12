@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Nav, Card, Button } from 'react-bootstrap';
 import { PDFViewer } from '../../Components/PDFviewer/Pdf';
+import { BeatLoader } from 'react-spinners';
 export const Timetable = () => {
   const { courseId } = useParams(); // e.g. "bca", "mba"
   const [course, setCourse] = useState(null);
@@ -31,7 +32,14 @@ export const Timetable = () => {
       });
   }, [courseId]);
 
-  if (loading) return <p className="text-center mt-4">Loading...</p>;
+  if (loading) return <BeatLoader
+      color="#1d3557"
+      loading={loading}
+      // cssOverride={override}
+      size={150}
+      aria-label="Loading Spinner"
+      data-testid="loader" />
+      // <p className="text-center mt-4">Loading...</p>;
   if (error) return <p className="text-danger text-center mt-4">Error: {error}</p>;
   if (!course || !selectedSemester) return null;
 

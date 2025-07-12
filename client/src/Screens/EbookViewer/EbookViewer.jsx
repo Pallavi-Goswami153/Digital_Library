@@ -64,7 +64,14 @@ export const EbookViewer = () => {
       });
   }, [category]);
 
-  if (loading) return <div className="text-center mt-4">Loading ebooks...</div>;
+  if (loading) return  <BeatLoader
+      color="#1d3557"
+      loading={loading}
+      // cssOverride={override}
+      size={150}
+      aria-label="Loading Spinner"
+      data-testid="loader" />
+  //  <div className="text-center mt-4">Loading ebooks...</div>;
 
   if (notFound) {
     return (
@@ -73,7 +80,6 @@ export const EbookViewer = () => {
       </div>
     );
   }
-
 
    const filteredData = ebooks.filter((el) => {
         //if no input the return the original
@@ -113,10 +119,10 @@ export const EbookViewer = () => {
               <td>{index + 1}</td>
               <td>{ebook.title}</td>
               <td>
-                <a href={ebook.link} target="_blank" rel="noopener noreferrer"><FiEye size={20}  style={{ cursor: "pointer" }} /></a>
+                <a href={ebook.link} target="_blank"><FiEye size={20}  style={{ cursor: "pointer" }} /></a>
               </td>
               <td>
-                <a href={ebook.link} target="_blank" rel="noopener noreferrer"><FiDownload size={20} style={{ cursor: "pointer" }} /></a>
+                <a href={ebook.link} target="_blank"><FiDownload size={20} style={{ cursor: "pointer" }} /></a>
               </td>
             </tr>
           ))}

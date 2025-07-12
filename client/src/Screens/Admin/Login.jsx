@@ -21,6 +21,9 @@ const validateSchema = yup.object().shape({
 })
 export const Login = () => {
     const navigate=useNavigate();
+    const handlenavigate=()=>{
+            navigate("/admin/home")
+    }
     const formik = useFormik({
         initialValues: {
             email: "",
@@ -34,12 +37,12 @@ export const Login = () => {
                 console.log(response.data)
                 // <Toaster position="top-right" />
                 toast.success(response.data.msg,{position:"top-right"})
-                // navigate("/")
-
+                handlenavigate();
+                
             }
-           catch(err){
-            console.log(err)
-           }
+            catch(err){
+                console.log(err)
+            }
         },
     })
     useEffect(() => {
