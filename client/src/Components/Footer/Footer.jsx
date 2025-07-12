@@ -5,7 +5,7 @@ export const Footer = () => {
     return (
 
         <footer
-            style={{ backgroundColor: "#f5f5dc", borderTop: "1px solid #ccc" }}>
+            style={{ backgroundColor: "#f5f5dc", borderTop: "1px solid #ccc"}}>
             <Container className="py-3" sticky="Bottom" >
                 <Row className="justify-content-center mb-2">
                     <Col xs="auto">

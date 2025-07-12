@@ -1,7 +1,9 @@
+import { Adminnav } from "../../Components/Adminnav/Adminnav"
 export const AdminHome=()=>{
     return(
         <>
-        <h1>admin home</h1>
+        <Adminnav/>
+        
         </>
     )
 }

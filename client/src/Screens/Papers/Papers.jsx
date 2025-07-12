@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { PaperCards } from '../../Components/PaperCard.jsx/PaperCard';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col, Nav, Card, Button } from 'react-bootstrap';
-
+import { BeatLoader } from 'react-spinners';
 export const Papers = () => {
     const { courseId } = useParams(); // e.g. "bca", "mba"
     const [course, setCourse] = useState(null);
@@ -33,12 +33,13 @@ export const Papers = () => {
     }, [courseId]);
 
     if (loading) return  <BeatLoader
-        color="#1d3557"
-        loading={loading}
-        // cssOverride={override}
-        size={150}
-        aria-label="Loading Spinner"
-        data-testid="loader" />
+  className='d-flex justify-content-center align-items-center'
+      color="#1d3557"
+      loading={loading}
+      // cssOverride={override}
+      size={20}
+      aria-label="Loading Spinner"
+      data-testid="loader" />
     // <p className="text-center mt-4">Loading...</p>;
     if (error) return <p className="text-danger text-center mt-4">Error: {error}</p>;
     if (!course || !selectedSemester) return null;

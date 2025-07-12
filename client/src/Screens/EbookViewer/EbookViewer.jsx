@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import { FiEye } from 'react-icons/fi';
 import { FiDownload } from 'react-icons/fi';
 import { Search } from '../../Components/SearchBar/SearchBar';
-
+import { BeatLoader } from 'react-spinners';
 // import { PDFViewer } from '../../Components/PDFviewer/Pdf';
 
 
@@ -65,10 +65,11 @@ export const EbookViewer = () => {
   }, [category]);
 
   if (loading) return  <BeatLoader
+  className='d-flex justify-content-center align-items-center'
       color="#1d3557"
       loading={loading}
       // cssOverride={override}
-      size={150}
+      size={20}
       aria-label="Loading Spinner"
       data-testid="loader" />
   //  <div className="text-center mt-4">Loading ebooks...</div>;
