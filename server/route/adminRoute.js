@@ -6,4 +6,8 @@ const router=express.Router();
 router.post("/admin/login",adminLogin);
 router.post("/admin/register",createAdmin)
 router.get("/admin/home",authenticatejwt,home)
+router.get("/admin/verify", authenticatejwt, (req, res) => {
+  res.status(200).json({ message: "Token valid" });
+});
+
 export default router;
