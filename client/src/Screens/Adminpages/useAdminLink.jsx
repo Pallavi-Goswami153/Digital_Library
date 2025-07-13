@@ -1,26 +1,24 @@
-import { useMemo } from "react";
-import { jwtDecode } from "jwt-decode";
-const useAdminLink=()=>{
-    return useMemo(()=>{
-        const token=localStorage.getItem('token');
-        if(!token){
-            return "/admin/login"
-        }
-        try{
-           const {exp}=jwtDecode(token);
-           const currentTime=Date.now()/1000;
-           if(exp>currentTime){
-            return "/admin/dashboard"
-           }
-           else{
-            localStorage.removeItem('token')
-            return "/admin/login"
-           }
-        }
-        catch(err){
-             localStorage.removeItem('token')
-            return "/admin/login"
-        }
-    },[])
-}
+import { useEffect, useState } from "react";
+import axios from "axios";
+
+const useAdminLink = () => {
+  const [adminLink, setAdminLink] = useState("/admin/login");
+
+  useEffect(() => {
+    axios.get("http://localhost:4000/admin/verify", {
+      withCredentials: true,
+    })
+    .then(() => {
+    console.log("Token valid:");
+      setAdminLink("/admin/dashboard");
+    })
+    .catch(() => {
+        console.log(" Token invalid:");
+      setAdminLink("/admin/login");
+    });
+  }, []);
+
+  return adminLink;
+};
+
 export default useAdminLink;
