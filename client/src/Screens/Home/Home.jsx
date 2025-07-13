@@ -7,8 +7,7 @@ import { FaItalic } from "react-icons/fa";
 // import { FaBusinessTime } from 'react-icons/fa';//bba
 // import { FaCodeBranch } from 'react-icons/fa';//mca
 // import { FaChartLine } from 'react-icons/fa';//mba
-
-
+import { AnimatedRow } from "../../Components/Framermotion/Framer";
 export const Home = () => {
     const data = [
         { key: "bca", label: "BCA", icon: "", headline: "Your gateway to knowledge starts here.", content: " Explore essential textbooks, reference materials, and guides curated to support your BCA curriculum. From programming to data structures, every page brings you closer to mastery.", ending: "📖 Read more. Know more. Build more."},
@@ -114,18 +113,19 @@ export const Home = () => {
         <p>The Digital Library at Maharaja Agrasen Institute of Management & Technology has been developed to provide easy access of the resources like E-book, Journal, Syllabus, Previous Years University Questions, Time Table and other academic resources to the student of the institute.</p>
         <Button className="bg-light" style={{color:"black", height:"50px" ,width:"100px"}}>Details</Button>
       </Card>*/}
-            <Container>
-                <h1 style={{textAlign:"center" ,margin:40, textDecoration:"bold", fontFamily:"cursive", fontStyle:"italic"}}>Your one-stop destination for semester success!
+            <Container style={{backgroundColor:"#394e6dff"}} className="mt-5 border rounded" >
+                <h1 style={{textAlign:"center" ,margin:40, textDecoration:"bold", fontFamily:"cursive", fontStyle:"italic",color:"white"}}>Your one-stop destination for semester success!
 
 </h1>
                 {data.map((item, index) => (
+                     <AnimatedRow key={item.key} index={index}>
                     <Row
                         key={item.key}
                         sm={1}
                         md={2}
                         lg={2}
                         className="m-5 p-5 shadow-lg border rounded border-0"
-                        style={{ cursor:"pointer" }}
+                        style={{ cursor:"pointer" , backgroundColor:"white" }}
                         onClick={()=>{handleClick(item.key)}}
                        
                     >
@@ -136,21 +136,21 @@ export const Home = () => {
                                     <Card className="text-dark border-0" style={{ backgroundColor: "#f5f5dc", height: "200px" }}  >
                                         <Card.Body className="d-flex flex-column justify-content-center align-items-center">
                                             
-                                            <h1>{item.label}</h1>
+                                            <h1 >{item.label}</h1>
                                         </Card.Body>
                                     </Card>
                                 </Col>
-                                <Col className="py-5">
-                                    <h5>{item.headline}</h5>
-                                    <p>{item.content}<br /><i>{item.ending}</i></p>
+                                <Col className="py-5 ">
+                                    <h5 style={{color:"#1d3557"}}>{item.headline}</h5>
+                                    <p>{item.content}<br /><i >{item.ending}</i></p>
                                     {/* <p>Get your Content from here</p> */}
                                 </Col>
                             </>
                         ) : (
                             <>
                                 <Col className="py-5">
-                                    <h5>{item.headline}</h5>
-                                    {item.content}<br /><i>{item.ending}</i>
+                                    <h5 style={{color:"#1d3557"}}>{item.headline}</h5>
+                                    {item.content}<br /><i >{item.ending}</i>
                                 </Col>
                                 <Col>
                                     <Card className="text-dark border-0" style={{ backgroundColor: "#fbeccf", height: "200px" }}>
@@ -163,11 +163,18 @@ export const Home = () => {
                             </>
                         )}
                     </Row>
+                    </AnimatedRow>
                 ))}
+                <div className="mt-5">
+                <h1 className="mb-3 text-center " style={{color:"white", fontFamily:"cursive"}}>PURPOSE OF DIGITAL LIBRARY</h1>
+                    <p className="mb-4 " style={{ fontSize: "1.2rem", color:"white", fontFamily:"cursive"}}>
+                        The Digital Library at Maharaja Agrasen Institute of Management & Technology has been developed to provide easy access to resources like E-books, Journals, Syllabus, Previous Years' University Questions, Time Table, and other academic materials for the students of the institute.
+                    </p>
+                </div>
             </Container>
 
 
-            <Container fluid className="my-5" >
+            {/* <Container className="my-5" >
                 <Card className="p-5 shadow-lg border rounded border-0" style={{ backgroundColor: "#fef8f2 " }}>
                     <h1 className="mb-3 text-primary ">PURPOSE OF DIGITAL LIBRARY</h1>
                     <p className="mb-4 text-dark" style={{ fontSize: "1.2rem" }}>
@@ -185,7 +192,7 @@ export const Home = () => {
                         Details
                     </Button>
                 </Card>
-            </Container>
+            </Container> */}
 
         </>
     );

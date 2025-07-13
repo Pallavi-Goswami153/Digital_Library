@@ -110,14 +110,17 @@ export const Contact = () => {
                                     </FormGroup>
                                    <Row>
     <Col>
-        <Button type="submit" variant="success" className="my-3 w-100" >
+        <Button type="submit" 
+        // variant="success"
+        style={{backgroundColor:"#1d3557"}}
+         className="my-3 w-100" >
             Send Now
         </Button>
     </Col>
     <Col>
         <Button
             type="button"
-            variant="danger"
+            variant="secondary"
             className="my-3 w-100"
             onClick={() => formik.resetForm()}
             
