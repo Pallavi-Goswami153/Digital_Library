@@ -6,7 +6,7 @@ import { connect, disconnect } from "../Config/db.js";
 export const adminLogin=async(req,res)=>{
       await connect();
      const { email, password } = req.body;
-      console.log(email,password)
+    //   console.log(email,password)
       const admin=await Admin.findOne({email});
       if(!admin){
         return res.status(200).json({msg:"Invalid credentials"});
@@ -17,7 +17,7 @@ export const adminLogin=async(req,res)=>{
      const token=jwt.sign(
        { email:email},
         process.env.JWT_SECRET,
-        {expiresIn:"10s"}
+        {expiresIn:"10m"}
      );
      res.json({token,msg:"Login sucessfully"});
 }

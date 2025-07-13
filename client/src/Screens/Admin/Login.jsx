@@ -40,13 +40,12 @@ export const Login = () => {
                 const token = response.data.token
                 toast.success(response.data.msg, { position: "top-right" })
                 localStorage.setItem('token', response.data.token)
-               navigate("/admin/home")
+               navigate("/admin/dashboard")
                 const { exp } = jwtDecode(token);
                 const timeout = exp * 1000 - Date.now();
                 setTimeout(() => {
                     localStorage.removeItem('token');
                     navigate("/admin/login")
-                    // window.location.href = '/login'; // OR navigate('/login') if using useNavigate
                 }, timeout);
 
             }
