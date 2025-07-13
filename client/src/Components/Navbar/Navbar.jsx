@@ -1,4 +1,5 @@
 import { Navbar, Nav, Container, NavDropdown,Dropdown } from "react-bootstrap"
+import useAdminLink from "../../Screens/Adminpages/useAdminLink" //use for check the nviagtion should be on home or login
 import "./navbar.css"
 import { Link } from "react-router-dom"
 export const Navbarr = () => {
@@ -92,7 +93,7 @@ export const Navbarr = () => {
                         <Nav className="fw-bold">
                             <Nav.Link as={Link} to="/about">About</Nav.Link>
                             <Nav.Link as={Link} to="/contact">Contact-us</Nav.Link>
-                            <Nav.Link as={Link} to="/admin/login">Admin</Nav.Link>
+                            <Nav.Link as={Link} to={useAdminLink()}>Admin</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

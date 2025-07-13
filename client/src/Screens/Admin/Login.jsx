@@ -1,6 +1,6 @@
 import { Container, Row, Col, Button, FormGroup, Form } from "react-bootstrap";
 import { Formik, useFormik } from "formik";
-import {jwtDecode} from "jwt-decode";
+// import {jwtDecode} from "jwt-decode";
 import * as yup from "yup"
 import axios from "axios"
 import { useEffect } from "react";
@@ -32,29 +32,49 @@ export const Login = () => {
         },
         validationSchema: validateSchema,
         onSubmit: async (values) => {
-            console.log(values)
             try {
-                const response = await axios.post("http://localhost:4000/admin/login", values);
-                console.log(response.data)
-                // <Toaster position="top-right" />
-                const token = response.data.token
-                toast.success(response.data.msg, { position: "top-right" })
-                localStorage.setItem('token', response.data.token)
-               navigate("/admin/home")
-                const { exp } = jwtDecode(token);
-                const timeout = exp * 1000 - Date.now();
-                setTimeout(() => {
-                    localStorage.removeItem('token');
-                    navigate("/admin/login")
-                    // window.location.href = '/login'; // OR navigate('/login') if using useNavigate
-                }, timeout);
+                const res = await axios.post("http://localhost:4000/admin/login", values, {
+                    withCredentials: true,
+                });
 
-            }
-            catch (err) {
-                console.log(err)
+                const expiresIn = res.data.expiresIn || 100; // fallback to 100s if not sent
+                toast.success(res.data.msg || "Login successful");
+                navigate("/admin/dashboard");
+                
+                 //taki jb cookie token expire hoja to wapis login page pe aaja 
+                setTimeout(() => {
+                    navigate("/admin/login");
+                }, expiresIn * 1000); // token expiry in ms
+            } catch (err) {
+                toast.error("Login failed");
+                console.log(err);
             }
         },
+
     })
+    // onSubmit: async (values) => {
+    //     console.log(values)
+    //     try {
+    //         const response = await axios.post("http://localhost:4000/admin/login", values);
+    //         console.log(response.data)
+    //         // <Toaster position="top-right" />
+    //         const token = response.data.token
+    //         toast.success(response.data.msg, { position: "top-right" })
+    //         localStorage.setItem('token', response.data.token)
+    //        navigate("/admin/dashboard")
+    //         const { exp } = jwtDecode(token);
+    //         const timeout = exp * 1000 - Date.now();
+    //         setTimeout(() => {
+    //             localStorage.removeItem('token');
+    //             navigate("/admin/login")
+    //         }, timeout);
+
+    //     }
+    //     catch (err) {
+    //         console.log(err)
+    //     }
+    // },
+
     useEffect(() => {
 
     })
