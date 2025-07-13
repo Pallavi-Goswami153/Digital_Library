@@ -35,7 +35,7 @@ function App() {
         <Route path="/admin/login" element={<Login/>}/>
         {/* <Route path="/technology" element={<Technology/>}/> */}
         <Route path="/allebooks/:category" element={<EbookViewer/>}/>
-        <Route path="/admin/home" element={<ProtectedRoute><AdminHome/></ProtectedRoute>}/>
+        <Route path="/admin/dashboard" element={<ProtectedRoute><AdminHome/></ProtectedRoute>}/>
 
       </Routes>
       <Footer />

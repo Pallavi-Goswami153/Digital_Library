@@ -5,5 +5,5 @@ import { authenticatejwt } from "../middleware/authenticatejwt.js";
 const router=express.Router();
 router.post("/admin/login",adminLogin);
 router.post("/admin/register",createAdmin)
-router.post("/admin/home",authenticatejwt,home)
+router.get("/admin/home",authenticatejwt,home)
 export default router;
