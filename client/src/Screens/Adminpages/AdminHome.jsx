@@ -1,59 +1,51 @@
+import { Container, Row, Col } from "react-bootstrap";
 import { useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Adminnav } from "../../Components/Adminnav/Adminnav"
+import { Adminnav } from "../../Components/Adminnav/Adminnav";
+
 export const AdminHome = () => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const interval = setInterval(() => {  //login=> dashboard => papers =>admin(verify krega k dashboard pe jana ya login)
-            axios.get("http://localhost:4000/admin/verify", {
-                withCredentials: true,
-            })
-            .then(()=>{
-                console.log("i am on home")
-            })
-                .catch(() => {
-                     console.log("navigating to login") //or agr error mtlb login pe jao
-                    navigate("/admin/login");
-                });
-        }, 5000); // check every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      axios
+        .get("http://localhost:4000/admin/verify", {
+          withCredentials: true,
+        })
+        .then(() => {
+          console.log("Session verified.");
+        })
+        .catch(() => {
+          console.log("Redirecting to login.");
+          navigate("/admin/login");
+        });
+    }, 5000);
 
-        return () => clearInterval(interval);
-    }, []);
+    return () => clearInterval(interval);
+  }, [navigate]);
 
-    return (
-        <>
-            <Adminnav />
-        </>
-    )
-}
+  return (
+    <Container fluid className="p-0 m-0">
+      <Row className="min-vh-100">
+        {/* Sidebar Navigation */}
+        <Col md={2} className="text-white p-3" style={{ backgroundColor: "#223e66"}}>
+          <Adminnav />
+        </Col>
 
-
-
-// local storage
-
-// useEffect(()=>{
-//     const token=localStorage.getItem('token')
-//     axios.get("http://localhost:4000/admin/home",{
-//         headers:{
-//             Authorization:`Bearer ${token}`,
-//         }
-//     })
-//     .then((res)=>{
-//         console.log(res.data);
-//     // setData(res.data);
-//     })
-//     .catch((err) => {
-//     console.error(err);
-//     // If token is expired or invalid, redirect to login
-//     localStorage.removeItem("token");
-//     navigate("/admin/login");
-//   });
-// },[]);
-// return (
-//     <>
-//         <Adminnav />
-//     </>
-// )
-// }
+        {/* Main Dashboard Content */}
+        <Col md={10} className="p-5">
+          <h3 className="text-primary mb-3">
+            <i>“Manage. Monitor. Modernize – Your Library at a Glance.”</i>
+          </h3>
+          <p className="lead">
+            <b>Welcome to your Digital Library Admin Panel.</b><br />
+            Here, you can manage books, oversee user activity, track borrowing trends,
+            and keep your digital shelves organized and up-to-date. Everything you need
+            to run your library efficiently — all in one place.
+          </p>
+        </Col>
+      </Row>
+    </Container>
+  );
+};

@@ -16,6 +16,9 @@ import { Login } from './Screens/Admin/Login'
 import { EbookViewer } from './Screens/EbookViewer/EbookViewer'
 import { AdminHome } from './Screens/Adminpages/AdminHome'
 import { ProtectedRoute } from './Screens/Adminpages/protectedRoute'
+import { AddCourse } from './Screens/Adminpages/AddCourse'
+import { DeleteCourse } from './Screens/Adminpages/DeleteCourse'
+import { UpdateCourse } from './Screens/Adminpages/UpdateCourse'
 function App() {
   return (
     <>
@@ -36,6 +39,11 @@ function App() {
         {/* <Route path="/technology" element={<Technology/>}/> */}
         <Route path="/allebooks/:category" element={<EbookViewer/>}/>
         <Route path="/admin/dashboard" element={<ProtectedRoute><AdminHome/></ProtectedRoute>}/>
+        <Route path="/admin/addcourse" element={<ProtectedRoute><AddCourse/></ProtectedRoute>}/>
+        <Route path="/admin/deletecourse" element={<ProtectedRoute><DeleteCourse/></ProtectedRoute>}/>
+        <Route path="/admin/updatecourse" element={<ProtectedRoute><UpdateCourse/></ProtectedRoute>}/>
+        <Route path="/admin/addebook" element={<ProtectedRoute><DeleteCourse/></ProtectedRoute>}/>
+        <Route path="/admin/deleteebook" element={<ProtectedRoute><DeleteCourse/></ProtectedRoute>}/>
 
       </Routes>
       <Footer />

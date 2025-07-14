@@ -11,7 +11,7 @@ const validateSchema = yup.object().shape({
         .matches(/^[0-9]{10}$/, "Conatct number should conatin 10 numeric values only"),
     email: yup.string()
         .required("E-Mail cannot be empty")
-                .matches(/^\S+@\S+\.\S+$/, "Enter a valid E-Mail"),
+        .matches(/^\S+@\S+\.\S+$/, "Enter a valid E-Mail"),
     subject: yup.string()
         .required("Subject cannot be empty"),
     remarks: yup.string()
@@ -108,27 +108,27 @@ export const Contact = () => {
                                             <div style={{ color: "red" }}>{formik.errors.remarks}</div>
                                         )}
                                     </FormGroup>
-                                   <Row>
-    <Col>
-        <Button type="submit" 
-        // variant="success"
-        style={{backgroundColor:"#1d3557"}}
-         className="my-3 w-100" >
-            Send Now
-        </Button>
-    </Col>
-    <Col>
-        <Button
-            type="button"
-            variant="secondary"
-            className="my-3 w-100"
-            onClick={() => formik.resetForm()}
-            
-        >
-            Clear
-        </Button>
-    </Col>
-</Row>
+                                    <Row>
+                                        <Col>
+                                            <Button type="submit"
+                                                // variant="success"
+                                                style={{ backgroundColor: "#1d3557" }}
+                                                className="my-3 w-100" >
+                                                Send Now
+                                            </Button>
+                                        </Col>
+                                        <Col>
+                                            <Button
+                                                type="button"
+                                                variant="secondary"
+                                                className="my-3 w-100"
+                                                onClick={() => formik.resetForm()}
+
+                                            >
+                                                Clear
+                                            </Button>
+                                        </Col>
+                                    </Row>
 
                                 </Col>
                             </Row>
@@ -139,7 +139,7 @@ export const Contact = () => {
                         <b>
                             Maharaja Agrasen Institute of Management and Technology, Near Agrasen Chowk, Old Saharanpur Road, (Adjacent to Sector-15, HUDA) Jagadhri-135003.
                             <br />
-                                        <br />
+                            <br />
                             Director: director@maimt.com
                             <br />
                             HR Department: hr@maimt.com

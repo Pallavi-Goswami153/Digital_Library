@@ -4,7 +4,7 @@ import { Admin } from "../model/schema.js"
 import jwt from "jsonwebtoken"
 import { connect, disconnect } from "../Config/db.js";
 export const adminLogin = async (req, res) => {
-    const expirySeconds = 100;
+    const expirySeconds = 10000;
     await connect();
     const { email, password } = req.body;
     const admin = await Admin.findOne({ email });
