@@ -4,35 +4,8 @@ export const About = () => {
         <>
             <Container className="bg-light">
                 <h1 className="text-center pt-5">About Us</h1>
-                <Container fluid className="m-4 d-flex justify-content-center border-0 border rounded">
-                    <Row lg={4} md={2} sm={1} style={{backgroundColor:"#1d3557"}} className="m-4">
-                    <Col>
-                    <Card className="d-flex justify-content-center align-items-center m-3 p-4" >
-                        <h3>4,500+</h3>
-                        <p>Placement offers                                               </p>
-                        
-                    </Card>
-                    </Col>
-                    <Col>
-                    <Card className="d-flex justify-content-center align-items-center m-3 p-4" >
-                        <h3>5,100+</h3>
-                        <p>Students Enrolled</p>
-                    </Card>
-                    </Col>
-                    <Col>
-                    <Card className="d-flex justify-content-center align-items-center m-3 p-4" >
-                        <h3>70+</h3>
-                        <p>Companies Visited</p>
-                    </Card>
-                    </Col>
-                    <Col>
-                    <Card className="d-flex justify-content-center align-items-center m-3 p-4" >
-                        <h3>27 LPA</h3>
-                        <p>Highest Package                                                            </p>
-                    </Card>
-                    </Col>
-                    </Row>
-                </Container>
+
+                   
                 <Container className="p-5" style={{ fontFamily: "sans-serif" }}>
                     MAIMT was founded in 1997, the Golden Jubilee year of India's Independence, as the result of the vision of Maharaja Agrasen under Kurukshetra University, Kurukshetra with the approval of AICTE. MAIMT is one of the premier institutes engaged in providing the necessary environment to facilitate advanced learning in the Management & Technical education. The infrastructure of the institute, facilities, course curriculum and teaching methodology are designed keeping in view its commitment to achieve excellence in the field of professional education. our motto is:
                     <br />

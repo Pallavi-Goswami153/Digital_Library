@@ -166,9 +166,15 @@ export const Home = () => {
                     </AnimatedRow>
                 ))}
                 <div className="mt-5">
-                <h1 className="mb-3 text-center " style={{color:"white", fontFamily:"cursive"}}>PURPOSE OF DIGITAL LIBRARY</h1>
+                <h1 className="mb-3 text-center " style={{color:"white", fontFamily:"cursive"}}>
+                    <i>
+                        PURPOSE OF DIGITAL LIBRARY
+                        </i>
+                        </h1>
                     <p className="mb-4 " style={{ fontSize: "1.2rem", color:"white", fontFamily:"cursive"}}>
+                        <i>
                         The Digital Library at Maharaja Agrasen Institute of Management & Technology has been developed to provide easy access to resources like E-books, Journals, Syllabus, Previous Years' University Questions, Time Table, and other academic materials for the students of the institute.
+                        </i>
                     </p>
                 </div>
             </Container>
